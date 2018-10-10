@@ -1,0 +1,19 @@
+{
+  "name": "udacity-private-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simpleChain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shotaro12oyama/udacity-private-blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shotaro12oyama/udacity-private-blockchain/issues"
+  },
+  "homepage": "https://github.com/shotaro12oyama/udacity-private-blockchain#readme"
+}

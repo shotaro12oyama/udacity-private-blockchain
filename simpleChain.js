@@ -30,8 +30,11 @@ const db = level(chainDB);
 
 class Blockchain{
   constructor(){
-    this.chain = [];
-    this.addBlock(new Block("First block in the chain - Genesis block"));
+    this.getBlockHeight().then((height) => {
+      if (height === -1){
+        this.addBlock(new Block("First block in the chain - Genesis block"))
+      }
+    })
   }
 
   // Add new block
@@ -86,7 +89,7 @@ class Blockchain{
   // Validate blockchain
   async validateChain(){
     let errorLog = [];
-    for (var i = 0; i < this.getBlockHeight-1; i++) {
+    for (var i = 0; i < await this.getBlockHeight-1; i++) {
       // validate block
       if (await !this.validateBlock(i))errorLog.push(i);
       // compare blocks hash link
