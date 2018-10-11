@@ -89,7 +89,7 @@ class Blockchain{
   // Validate blockchain
   async validateChain(){
     let errorLog = [];
-    for (var i = 0; i < await this.getBlockHeight-1; i++) {
+    for (var i = 0; i < await this.getBlockHeight()+1; i++) {
       // validate block
       if (await !this.validateBlock(i))errorLog.push(i);
       // compare blocks hash link
